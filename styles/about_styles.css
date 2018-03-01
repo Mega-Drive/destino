@@ -1100,7 +1100,8 @@ section
 	max-height: 100%;
 }
 .svg path,
-.svg rect
+.svg rect,
+.svg polygon
 {
 	fill: #afafaf;
 	-webkit-transition: all 200ms ease;
@@ -1110,7 +1111,8 @@ section
 	transition: all 200ms ease;
 }
 .icon_box:hover .svg path,
-.icon_box:hover .svg rect
+.icon_box:hover .svg rect,
+.icon_box:hover .svg polygon
 {
 	fill: #fe3c52;
 }
