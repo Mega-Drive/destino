@@ -1,0 +1,2 @@
+# destino
+destino gh-pages
