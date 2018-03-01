@@ -1099,6 +1099,19 @@ section
 {
 	max-height: 100%;
 }
+.svg path
+{
+	fill: #afafaf;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.icon_box:hover .svg path
+{
+	fill: #fe3c52;
+}
 .icon_box_title
 {
 	display: inline-block;
