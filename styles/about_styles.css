@@ -1112,6 +1112,11 @@ section
 {
 	fill: #fe3c52;
 }
+.icon_box svg
+{
+	height: 62px;
+	width: auto;
+}
 .icon_box_title
 {
 	display: inline-block;
@@ -1158,11 +1163,11 @@ section
 	height: 100%;
 	content: '';
 	background: #fe3c52;
-	-webkit-transition: all 0.5s 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91);
-    -moz-transition: all 0.5s 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91);
-    -ms-transition: all 0.5s 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91);
-    -o-transition: all 0.5s 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91);
-    transition: all 0.5s 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+	-webkit-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -moz-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -ms-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -o-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
 }
 .icon_box_more:hover::before
 {
