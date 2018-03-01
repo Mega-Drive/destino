@@ -7,7 +7,8 @@
 1. Vars and Inits
 2. Set Header
 3. Initialize Hamburger
-4. Init Special Slider
+4. Init Parallax
+5. Initialize Milestones
 
 
 ******************************/
@@ -26,6 +27,7 @@ $(document).ready(function()
 	var hamb = $('.hamburger');
 	var hambActive = false;
 	var menuActive = false;
+	var ctrl = new ScrollMagic.Controller();
 
 	setHeader();
 
@@ -40,7 +42,8 @@ $(document).ready(function()
 	});
 
 	initHamburger();
-	initSpecialSlider();
+	initParallax();
+	initMilestones();
 
 	/* 
 
@@ -135,41 +138,88 @@ $(document).ready(function()
 
 	/* 
 
-	4. Set Header
+	4. Init Parallax
 
 	*/
 
-	function initSpecialSlider()
+	function initParallax()
 	{
-		if($('.special_slider').length)
+		// Add parallax effect to every element with class prlx
+		// Add class prlx_parent to the parent of the element
+		if($('.prlx_parent').length && $('.prlx').length)
 		{
-			var specialSlider = $('.special_slider');
-			specialSlider.owlCarousel(
+			var elements = $('.prlx_parent');
+
+			elements.each(function()
 			{
-				loop:true,
-				autoplay:false,
-				center:true,
-				stagePadding:190,
-				margin:5,
-				nav:false,
-				dots:false,
-				smartSpeed:700,
-				responsive:
-				{
-					0:{items:1,margin:5,stagePadding:0},
-					992:{items:2,margin:5,stagePadding:130},
-					1280:{items:3,margin:5,stagePadding:190}
-				}
+				var ele = this;
+				var bcg = $(ele).find('.prlx');
+
+				var slideParallaxScene = new ScrollMagic.Scene({
+			        triggerElement: ele,
+			        triggerHook: 1,
+			        duration: "200%"
+			    })
+			    .setTween(TweenMax.from(bcg, 1, {y: '-30%', ease:Power0.easeNone}))
+			    .addTo(ctrl);
 			});
 		}
+	}
 
-		if($('.special_slider_nav').length)
+	/* 
+
+	5. Initialize Milestones
+
+	*/
+
+	function initMilestones()
+	{
+		if($('.milestone_counter').length)
 		{
-			var next = $('.special_slider_nav');
-			next.on('click', function()
-			{
-				specialSlider.trigger('next.owl.carousel');
-			});
+			var milestoneItems = $('.milestone_counter');
+
+	    	milestoneItems.each(function(i)
+	    	{
+	    		var ele = $(this);
+	    		var endValue = ele.data('end-value');
+	    		var eleValue = ele.text();
+
+	    		/* Use data-sign-before and data-sign-after to add signs
+	    		infront or behind the counter number */
+	    		var signBefore = "";
+	    		var signAfter = "";
+
+	    		if(ele.attr('data-sign-before'))
+	    		{
+	    			signBefore = ele.attr('data-sign-before');
+	    		}
+
+	    		if(ele.attr('data-sign-after'))
+	    		{
+	    			signAfter = ele.attr('data-sign-after');
+	    		}
+
+	    		var milestoneScene = new ScrollMagic.Scene({
+		    		triggerElement: this,
+		    		triggerHook: 'onEnter',
+		    		reverse:false
+		    	})
+		    	.on('start', function()
+		    	{
+		    		var counter = {value:eleValue};
+		    		var counterTween = TweenMax.to(counter, 4,
+		    		{
+		    			value: endValue,
+		    			roundProps:"value", 
+						ease: Circ.easeOut, 
+						onUpdate:function()
+						{
+							document.getElementsByClassName('milestone_counter')[i].innerHTML = signBefore + counter.value + signAfter;
+						}
+		    		});
+		    	})
+			    .addTo(ctrl);
+	    	});
 		}
 	}
 });
