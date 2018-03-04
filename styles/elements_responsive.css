@@ -138,6 +138,18 @@
 	{
 		margin-bottom: 60px;
 	}
+	.milestone_col:not(:last-child)
+	{
+		margin-bottom: 60px;
+	}
+	.icon_box_col:not(:last-child)
+	{
+		margin-bottom: 40px;
+	}
+	.icon_box_title
+	{
+		font-size: 22px;
+	}
 	.footer_col
 	{
 		margin-bottom: 30px;
@@ -210,16 +222,6 @@
 	.find_button
 	{
 		width: 138px;
-	}
-	.newsletter_input
-	{
-		width: 100%;
-	}
-	.newsletter_button
-	{
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 15px;
 	}
 }
 
@@ -327,59 +329,6 @@
 	.home_breadcrumb a
 	{
 		font-size: 16px;
-	}
-	.find
-	{
-		width: 100%;
-		margin-top: 0;
-	}
-	.find_title
-	{
-		font-size: 24px;
-	}
-	.find_input
-	{
-		height: 40px;
-		line-height: 36px;
-	}
-	.find_button
-	{
-		height: 40px;
-		line-height: 40px;
-		width: 120px;
-		padding: 0;
-	}
-	.find_input::-webkit-input-placeholder
-	{
-		font-size: 12px !important;
-	}
-	.find_input:-moz-placeholder
-	{
-		font-size: 12px !important;
-	}
-	.find_input::-moz-placeholder
-	{
-		font-size: 12px !important;
-	} 
-	.find_input:-ms-input-placeholder
-	{ 
-		font-size: 12px !important;
-	}
-	.find_input::input-placeholder
-	{
-		font-size: 12px !important;
-	}
-	.dropdown_item_select
-	{
-		font-size: 12px;
-	}
-	.find_item div
-	{
-		font-size: 12px;
-	}
-	.find_button
-	{
-		font-size: 14px;
 	}
 	.section_title div
 	{

@@ -7,31 +7,21 @@
 
 1. Fonts
 2. Body and some general stuff
-3. Header
-	3.1 Top Bar
-	3.2 Logo
-	3.3 Main Nav
-	3.4 Menu
-4. Home
-	4.1 Home Slider
-	4.2 Home Slider Nav
-	4.3 Home Slider Dots
-5. Search
-6. Section Title
-7. Intro
-8. CTA
-	8.1 CTA Slider
-9. Offers
-10. Testimonials
-	10.1 Testimonials Slider
-11. Trending
-12. Contact
-13. Footer
-	13.1 Footer - About
-	13.2 Footer - Blog
-	13.3 Footer - Tags
-	13.4 Footer - Contact Info
-14. Copyright
+3. Home
+4. Header
+	4.1 Logo
+	4.2 Navigation
+	4.3 Search
+	4.4 Hamburger
+5. Menu
+	5.1 Menu Social
+	5.2 Menu copyright
+6. Find
+7. About
+8. Milestones
+9. Services
+10. Newsletter
+11. Footer
 
 
 ******************************/
@@ -121,7 +111,8 @@ p a:hover::after
 }
 ::selection
 {
-	
+	background: rgba(254, 60, 82, 0.8);
+	color: #FFFFFF;
 }
 p::selection
 {
@@ -1010,7 +1001,7 @@ section
 }
 
 /*********************************
-6. Milestones
+8. Milestones
 *********************************/
 
 .milestones
@@ -1077,7 +1068,7 @@ section
 }
 
 /*********************************
-6. Services
+9. Services
 *********************************/
 
 .services
@@ -1179,7 +1170,7 @@ section
 }
 
 /*********************************
-12. Newsletter
+10. Newsletter
 *********************************/
 
 .newsletter
@@ -1278,7 +1269,7 @@ section
 }
 
 /*********************************
-13. Footer
+11. Footer
 *********************************/
 
 .footer

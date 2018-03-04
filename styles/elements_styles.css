@@ -16,12 +16,15 @@
 5. Menu
 	5.1 Menu Social
 	5.2 Menu copyright
-6. Find
-7. Contact
-	7.1 Contact Form
-	7.2 Contact Map
-8. Newsletter
-9. Footer
+6. Elements
+	6.1 Buttons
+	6.2 Accordions & Tabs
+		6.2.1 Accordions
+		6.2.2 Tabs
+	6.3 Loaders
+	6.4 Milestones
+	6.5 Icon Boxes
+7. Footer
 
 
 ******************************/
@@ -111,7 +114,8 @@ p a:hover::after
 }
 ::selection
 {
-	
+	background: rgba(254, 60, 82, 0.8);
+	color: #FFFFFF;
 }
 p::selection
 {
@@ -801,7 +805,7 @@ section
 .elements
 {
 	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-bottom: 108px;
 }
 .elements_title
 {
@@ -1114,7 +1118,7 @@ section
 }
 .milestones_container
 {
-	margin-top: 90px;
+	margin-top: 74px;
 }
 .milestone
 {
@@ -1133,7 +1137,8 @@ section
 	height: 82px;
 	text-align: center;
 }
-.milestone_icon svg
+.milestone_icon svg,
+.milestone_icon img
 {
 	max-height: 100%;
 	width: auto;
@@ -1150,10 +1155,104 @@ section
 .svg polygon
 {
 	fill: #131a2f;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
 
 /*********************************
-9. Footer
+6.5 Icon Boxes
+*********************************/
+
+.icon_boxes
+{
+	margin-top: 96px;
+}
+.icon_box_container
+{
+	margin-top: 74px;
+}
+.icon_box_image
+{
+	display: inline-block;
+	height: 62px;
+}
+.icon_box_image img
+{
+	max-height: 100%;
+}
+.icon_box:hover .svg path,
+.icon_box:hover .svg rect,
+.icon_box:hover .svg polygon
+{
+	fill: #fe3c52;
+}
+.icon_box svg
+{
+	height: 62px;
+	width: auto;
+}
+.icon_box_title
+{
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 24px;
+	font-weight: 300;
+	color: #131a2f;
+	padding-left: 22px;
+}
+.icon_box_text
+{
+	margin-top: 14px;
+}
+.icon_box p:last-of-type
+{
+	margin-bottom: 0;
+}
+.icon_box_more
+{
+	display: inline-block;
+	position: relative;
+	font-size: 12px;
+	font-weight: 400;
+	color: #131a2f;
+	margin-top: 35px;
+	overflow: hidden;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.icon_box_more:hover
+{
+	color: #fe3c52;
+}
+.icon_box_more::before
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: #fe3c52;
+	-webkit-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -moz-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -ms-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -o-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+}
+.icon_box_more:hover::before
+{
+	left: 100%;
+}
+
+/*********************************
+7. Footer
 *********************************/
 
 .footer
