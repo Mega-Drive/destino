@@ -1133,9 +1133,10 @@ section
 	height: 82px;
 	text-align: center;
 }
-.milestone_icon img
+.milestone_icon svg
 {
 	max-height: 100%;
+	width: auto;
 }
 .milestone_counter
 {
