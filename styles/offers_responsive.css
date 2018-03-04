@@ -63,7 +63,15 @@
 
 @media only screen and (max-width: 1199px)
 {
-	
+	.sorting_group_1
+	{
+		float: none;
+	}
+	.sorting_group_2
+	{
+		margin-top: 10px;
+		float: none;
+	}
 }
 
 /************
@@ -134,25 +142,17 @@
 	{
 		width: 138px;
 	}
-	.about_col:not(:first-child)
+	.item_text
 	{
-		margin-bottom: 40px;
+		
 	}
-	.milestone_col:not(:last-child)
+	.item_image
 	{
-		margin-bottom: 60px;
+		width: 50%;
 	}
-	.milestone_counter
+	.item_content
 	{
-		margin-top: 23px;
-	}
-	.icon_box_col:not(:last-child)
-	{
-		margin-bottom: 40px;
-	}
-	.icon_box_title
-	{
-		font-size: 22px;
+		width: 50%;
 	}
 	.footer_col
 	{
@@ -226,6 +226,34 @@
 	.find_button
 	{
 		width: 138px;
+	}
+	.item.box
+	{
+		width: 100%;
+	}
+	.item_text
+	{
+		display: none;
+	}
+	.detail_view i
+	{
+		color: #dbdbdb;
+	}
+	.detail_view:hover i
+	{
+		color: #dbdbdb;
+	}
+	.box_view i
+	{
+		color: #dbdbdb;
+	}
+	.box_view:hover i
+	{
+		color: #dbdbdb;
+	}
+	.sorting_group_2 ul li
+	{
+		margin-right: 20px;
 	}
 	.newsletter_input
 	{
@@ -411,6 +439,34 @@
 	{
 		font-size: 12px;
 		line-height: 40px;
+	}
+	.item_content
+	{
+		padding-left: 15px;
+	}
+	.item_price
+	{
+		font-size: 12px;
+	}
+	.item_title
+	{
+		font-size: 16px;
+	}
+	.item_content ul li
+	{
+		font-size: 11px;
+	}
+	.sorting_group_2 ul
+	{
+		float: none;
+	}
+	.sorting_icons
+	{
+		float: none;
+	}
+	.detail_view
+	{
+		margin-left: 0;
 	}
 	.newsletter_title
 	{

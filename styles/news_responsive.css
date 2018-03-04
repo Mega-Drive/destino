@@ -134,25 +134,9 @@
 	{
 		width: 138px;
 	}
-	.about_col:not(:first-child)
+	.sidebar_offer_content
 	{
-		margin-bottom: 40px;
-	}
-	.milestone_col:not(:last-child)
-	{
-		margin-bottom: 60px;
-	}
-	.milestone_counter
-	{
-		margin-top: 23px;
-	}
-	.icon_box_col:not(:last-child)
-	{
-		margin-bottom: 40px;
-	}
-	.icon_box_title
-	{
-		font-size: 22px;
+		text-align: center;
 	}
 	.footer_col
 	{
@@ -246,7 +230,7 @@
 @media only screen and (max-width: 575px)
 {
 	h2{font-size: 24px;}
-	p{font-size:13px;}
+	p{font-size:12px;}
 	.header_container
 	{
 		height: 70px;
@@ -411,6 +395,15 @@
 	{
 		font-size: 12px;
 		line-height: 40px;
+	}
+	.post_title a
+	{
+		font-size: 24px;
+	}
+	.post_meta ul li,
+	.post_meta ul li a
+	{
+		font-size: 10px;
 	}
 	.newsletter_title
 	{

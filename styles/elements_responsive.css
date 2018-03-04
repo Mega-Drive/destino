@@ -134,25 +134,9 @@
 	{
 		width: 138px;
 	}
-	.about_col:not(:first-child)
-	{
-		margin-bottom: 40px;
-	}
-	.milestone_col:not(:last-child)
+	.loader_col:not(:last-child)
 	{
 		margin-bottom: 60px;
-	}
-	.milestone_counter
-	{
-		margin-top: 23px;
-	}
-	.icon_box_col:not(:last-child)
-	{
-		margin-bottom: 40px;
-	}
-	.icon_box_title
-	{
-		font-size: 22px;
 	}
 	.footer_col
 	{
@@ -246,7 +230,7 @@
 @media only screen and (max-width: 575px)
 {
 	h2{font-size: 24px;}
-	p{font-size:13px;}
+	p{font-size:12px;}
 	.header_container
 	{
 		height: 70px;
@@ -412,41 +396,44 @@
 		font-size: 12px;
 		line-height: 40px;
 	}
-	.newsletter_title
+	.button_3 a,
+	.button_4 a
+	{
+		line-height: 36px;
+	}
+	.elements_title
 	{
 		font-size: 24px;
 	}
-	.newsletter_input
+	.elements_button
+	{
+		margin-right: 8px;
+		margin-bottom: 10px;
+	}
+	.accordion
 	{
 		height: 40px;
-		line-height: 36px;
+		font-size: 12px;
 	}
-	.newsletter_button
+	.accordion div
+	{
+		max-width: 88%;
+	}
+	.tabs_container
+	{
+		margin-top: 30px;
+	}
+	.tab
 	{
 		height: 40px;
 		line-height: 40px;
-		width: 140px;
-		padding: 0;
+		font-size: 12px;
 	}
-	.newsletter_input::-webkit-input-placeholder
+	.tab_panels
 	{
-		font-size: 12px !important;
-	}
-	.newsletter_input:-moz-placeholder
-	{
-		font-size: 12px !important;
-	}
-	.newsletter_input::-moz-placeholder
-	{
-		font-size: 12px !important;
-	} 
-	.newsletter_input:-ms-input-placeholder
-	{ 
-		font-size: 12px !important;
-	}
-	.newsletter_input::input-placeholder
-	{
-		font-size: 12px !important;
+		padding-left: 30px;
+		padding-top: 30px;
+		padding-bottom: 35px;
 	}
 }
 
