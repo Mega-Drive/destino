@@ -10,6 +10,7 @@
 4. Init Parallax
 5. Initialize Milestones
 6. Init SVG
+7. Init Search
 
 
 ******************************/
@@ -46,6 +47,7 @@ $(document).ready(function()
 	initParallax();
 	initMilestones();
 	initSvg();
+	initSearch();
 
 	/* 
 
@@ -261,5 +263,27 @@ $(document).ready(function()
 				$img.replaceWith($svg);
 			}, 'xml');
 		});
+	}
+
+	/* 
+
+	7. Init Search
+
+	*/
+
+	function initSearch()
+	{
+		if($('.search').length)
+		{
+			var search = $('.search');
+			search.on('click', function(e)
+			{
+				var target = $(e.target);
+				if(!target.hasClass('ctrl_class'))
+				{
+					$(this).toggleClass('active');
+				}
+			});
+		}
 	}
 });

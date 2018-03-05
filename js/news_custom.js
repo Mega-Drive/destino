@@ -8,6 +8,7 @@
 2. Set Header
 3. Initialize Hamburger
 4. Init Parallax
+5. Init Search
 
 
 ******************************/
@@ -42,6 +43,7 @@ $(document).ready(function()
 
 	initHamburger();
 	initParallax();
+	initSearch();
 
 	/* 
 
@@ -160,6 +162,28 @@ $(document).ready(function()
 			    })
 			    .setTween(TweenMax.from(bcg, 1, {y: '-30%', ease:Power0.easeNone}))
 			    .addTo(ctrl);
+			});
+		}
+	}
+
+	/* 
+
+	5. Init Search
+
+	*/
+
+	function initSearch()
+	{
+		if($('.search').length)
+		{
+			var search = $('.search');
+			search.on('click', function(e)
+			{
+				var target = $(e.target);
+				if(!target.hasClass('ctrl_class'))
+				{
+					$(this).toggleClass('active');
+				}
 			});
 		}
 	}

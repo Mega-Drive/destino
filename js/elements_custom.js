@@ -13,6 +13,7 @@
 7. Init Loaders
 8. Initialize Milestones
 9. Init SVG
+10. Init Search
 
 
 ******************************/
@@ -52,6 +53,7 @@ $(document).ready(function()
 	initLoaders();
 	initMilestones();
 	initSvg();
+	initSearch();
 
 	/* 
 
@@ -427,5 +429,27 @@ $(document).ready(function()
 				$img.replaceWith($svg);
 			}, 'xml');
 		});
+	}
+
+	/* 
+
+	10. Init Search
+
+	*/
+
+	function initSearch()
+	{
+		if($('.search').length)
+		{
+			var search = $('.search');
+			search.on('click', function(e)
+			{
+				var target = $(e.target);
+				if(!target.hasClass('ctrl_class'))
+				{
+					$(this).toggleClass('active');
+				}
+			});
+		}
 	}
 });

@@ -9,6 +9,7 @@
 3. Initialize Hamburger
 4. Init Parallax
 5. Init Google Map
+6. Init Search
 
 
 ******************************/
@@ -45,6 +46,7 @@ $(document).ready(function()
 	initHamburger();
 	initParallax();
 	initGoogleMap();
+	initSearch();
 
 	/* 
 
@@ -250,5 +252,27 @@ $(document).ready(function()
 		    	}
 			}, 1400);
 		});
+	}
+
+	/* 
+
+	6. Init Search
+
+	*/
+
+	function initSearch()
+	{
+		if($('.search').length)
+		{
+			var search = $('.search');
+			search.on('click', function(e)
+			{
+				var target = $(e.target);
+				if(!target.hasClass('ctrl_class'))
+				{
+					$(this).toggleClass('active');
+				}
+			});
+		}
 	}
 });

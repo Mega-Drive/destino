@@ -9,6 +9,7 @@
 3. Initialize Hamburger
 4. Init Special Slider
 5. Init Video
+6. Init Search
 
 
 ******************************/
@@ -43,6 +44,7 @@ $(document).ready(function()
 	initHamburger();
 	initSpecialSlider();
 	initVideo();
+	initSearch();
 
 	/* 
 
@@ -191,5 +193,27 @@ $(document).ready(function()
           preloader: false,
           fixedContentPos: false
         });
+	}
+
+	/* 
+
+	6. Init Search
+
+	*/
+
+	function initSearch()
+	{
+		if($('.search').length)
+		{
+			var search = $('.search');
+			search.on('click', function(e)
+			{
+				var target = $(e.target);
+				if(!target.hasClass('ctrl_class'))
+				{
+					$(this).toggleClass('active');
+				}
+			});
+		}
 	}
 });
