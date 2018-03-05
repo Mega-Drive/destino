@@ -8,6 +8,7 @@
 2. Set Header
 3. Initialize Hamburger
 4. Init Special Slider
+5. Init Video
 
 
 ******************************/
@@ -41,6 +42,7 @@ $(document).ready(function()
 
 	initHamburger();
 	initSpecialSlider();
+	initVideo();
 
 	/* 
 
@@ -171,5 +173,23 @@ $(document).ready(function()
 				specialSlider.trigger('next.owl.carousel');
 			});
 		}
+	}
+
+	/* 
+
+	5. Init Video
+
+	*/
+
+	function initVideo()
+	{
+		$('.video').magnificPopup({
+          disableOn: 700,
+          type: 'iframe',
+          mainClass: 'mfp-fade',
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false
+        });
 	}
 });

@@ -1069,7 +1069,7 @@ section
 9. Video
 *********************************/
 
-.video
+.video_section
 {
 	padding-top: 144px;
 	padding-bottom: 198px;
@@ -1105,7 +1105,12 @@ section
 .video_play
 {
 	margin: 0 auto;
-	margin-top: 43px;}
+	margin-top: 43px;
+}
+.video
+{
+	outline: none;
+}
 .play_button
 {
 	cursor: pointer;
